@@ -11,7 +11,6 @@ import seedu.addressbook.common.Utils;
 import seedu.addressbook.data.exception.DuplicateDataException;
 
 
-
 /**
  * A list of persons. Does not allow null elements or duplicates.
  *
@@ -81,6 +80,13 @@ public class UniquePersonList implements Iterable<Person> {
         return Collections.unmodifiableList(internalList);
     }
 
+    /**
+     * Returns a modifiable java List with elements cast as mutable 
+     */
+    public List<Person> mutableListView() {
+        List<Person> newModifiableList = new ArrayList(internalList);
+        return newModifiableList;
+    }
 
     /**
      * Checks if the list contains an equivalent person as the given argument.
