@@ -40,10 +40,11 @@
   add Valid Name p/12345 e/valid@e.mail a/valid, address t/invalid_-[.tag
 
   # should add correctly and list non private information
-  add Adam Brown p/111111 e/adam@gmail.com a/111, alpha street
+  add Bdam Brown p/111111 e/adam@gmail.com a/111, alpha street
   list
-  add Betsy Choo pp/222222 pe/benchoo@nus.edu.sg pa/222, beta street t/secretive
+  add Aetsy Choo pp/222222 pe/benchoo@nus.edu.sg pa/222, beta street t/secretive
   list
+  sort
   add Charlie Dickson pp/333333 e/charlie.d@nus.edu.sg a/333, gamma street t/friends t/school
   list
   add Dickson Ee p/444444 pe/dickson@nus.edu.sg a/444, delta street t/friends
@@ -93,18 +94,18 @@
   # should consider no keywords as invalid command format
   find
   # should only match full words in person names
-  find bet
+  find aet
   # does not match if none have keyword
   find 23912039120
   # matching should be case-sensitive
-  find betsy
+  find aetsy
 
   # find unique keyword
-  find Betsy
+  find Aetsy
   # find multiple with same keyword
   find Dickson
   # find multiple with some keywords
-  find Charlie Betsy
+  find Charlie Aetsy
 
 ##########################################################
 # test delete person command
